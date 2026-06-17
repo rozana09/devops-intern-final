@@ -1,0 +1,83 @@
+Grafana Loki Setup
+
+Name: Rozana IM
+Date: 17 June 2026
+
+1. Start Loki
+
+Command used:
+
+docker run -d -p 3100:3100 grafana/loki:3.0.0
+
+Verification URL:
+
+http://localhost:3100/ready
+
+Expected output:
+
+ready
+
+2. Start Grafana
+
+Command used:
+
+docker run -d -p 3000:3000 grafana/grafana
+
+Grafana URL:
+
+http://localhost:3000
+
+Default login:
+
+Username: admin
+Password: admin
+
+3. Configure Grafana Data Source
+
+Data Source Type:
+Loki
+
+URL:
+http://host.docker.internal:3100
+
+Connection test result:
+
+Data source is working
+
+4. Log Forwarding
+
+Created a test log file:
+
+/Users/apple/loki-test/test.log
+
+Example log entries:
+
+Hello Loki
+Testing Grafana Loki
+DevOps Intern Assessment
+
+Grafana Alloy was used to forward logs from the local file to Loki.
+
+5. View Logs
+
+Logs were viewed using Grafana Explore.
+
+Steps:
+
+* Open Grafana
+* Navigate to Explore
+* Select Loki data source
+* Run LogQL queries
+
+Example query:
+
+{job="varlogs"}
+
+6. Result
+
+Successfully configured Loki and Grafana locally.
+
+Successfully forwarded logs using Grafana Alloy.
+
+Successfully viewed logs in Grafana Explore.
+

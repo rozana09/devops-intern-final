@@ -1,0 +1,54 @@
+Virtual Machine Setup
+
+Name: Rozana IM
+Date: 17 June 2026
+
+Objective
+
+Deploy and test the DevOps project inside a Virtual Machine.
+
+Environment
+
+VirtualBox
+
+Operating System:
+Ubuntu Linux
+
+Configuration
+
+RAM: 2048 MB
+
+Disk Size: 20 GB
+
+Network Mode: NAT
+
+Steps Performed
+
+1. Created Ubuntu Virtual Machine in VirtualBox.
+
+2. Installed Ubuntu operating system.
+
+3. Verified internet connectivity.
+
+4. Installed Docker.
+
+5. Cloned project repository:
+
+git clone https://github.com/rozana09/devops-intern-final.git
+
+6. Built Docker image:
+
+docker build -t devops-hello .
+
+7. Ran Docker container:
+
+docker run --rm devops-hello
+
+Output:
+
+Hello, DevOps!
+
+Result
+
+Successfully executed the project inside a virtual machine environment.
+
